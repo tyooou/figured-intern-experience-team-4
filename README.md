@@ -73,7 +73,15 @@ git clone [repository-url]
 cd figured-intern-experience
 ```
 
-### 2. Start Laravel Sail
+### 2. Install PHP Dependencies
+
+Install the Composer packages locally (this is needed to get Laravel Sail):
+
+```bash
+composer install
+```
+
+### 3. Start Laravel Sail
 
 Launch the Docker containers using Laravel Sail:
 
@@ -83,15 +91,15 @@ Launch the Docker containers using Laravel Sail:
 
 This command will start all the necessary services (web server, database, etc.). Keep this terminal window open while working on the application.
 
-### 3. Install PHP Dependencies
+### 4. Install PHP Dependencies (Inside Container)
 
-In a new terminal window, install the Composer packages:
+In a new terminal window, install the Composer packages inside the Docker container to ensure consistency:
 
 ```bash
 ./vendor/bin/sail composer install
 ```
 
-### 4. Install JavaScript Dependencies
+### 5. Install JavaScript Dependencies
 
 Install the Node.js packages required for the frontend:
 
@@ -99,7 +107,7 @@ Install the Node.js packages required for the frontend:
 ./vendor/bin/sail npm install
 ```
 
-### 5. Start the Development Server
+### 6. Start the Development Server
 
 Run the Vite development server for hot-reloading and asset compilation:
 
