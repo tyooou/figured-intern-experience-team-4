@@ -9,8 +9,58 @@ Before you begin, ensure you have the following installed on your machine:
 - **Docker Desktop** (required for Laravel Sail)
   - [Mac Installation Guide](https://docs.docker.com/desktop/setup/install/mac-install/)
   - [Windows Installation Guide](https://docs.docker.com/desktop/setup/install/windows-install/)
+- **Composer** (PHP dependency manager)
+  - See installation instructions below
 - **Git** (for cloning the repository)
 - **A terminal application** (Terminal on Mac, PowerShell/WSL on Windows)
+
+### Installing Composer
+
+#### Mac Installation
+
+**Option 1: Using Homebrew (Recommended)**
+
+If you have Homebrew installed, simply run:
+```bash
+brew install composer
+```
+
+**Option 2: Manual Installation**
+
+1. Open Terminal and run this command to download the installer:
+```bash
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+```
+
+2. Run the installer:
+```bash
+php composer-setup.php
+```
+
+3. Move Composer to make it globally accessible:
+```bash
+sudo mv composer.phar /usr/local/bin/composer
+```
+
+4. Verify the installation:
+```bash
+composer --version
+```
+
+#### Windows Installation
+
+1. Download and run the [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
+
+2. Follow the installation wizard:
+   - It will automatically find your PHP installation
+   - Use the default settings unless you have specific requirements
+
+3. After installation, open a new Command Prompt or PowerShell window and verify:
+```cmd
+composer --version
+```
+
+For more detailed installation instructions and troubleshooting, visit the [official Composer documentation](https://getcomposer.org/doc/00-intro.md).
 
 ## Getting Started
 
