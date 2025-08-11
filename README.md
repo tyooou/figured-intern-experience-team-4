@@ -91,12 +91,18 @@ Launch the Docker containers using Laravel Sail:
 
 This command will start all the necessary services (web server, database, etc.). Keep this terminal window open while working on the application.
 
-### 4. Install PHP Dependencies (Inside Container)
+### 4. Set up the Application
 
-In a new terminal window, install the Composer packages inside the Docker container to ensure consistency:
+In a new terminal window, run these commands to configure the application:
 
+Generate the application encryption key:
 ```bash
-./vendor/bin/sail composer install
+./vendor/bin/sail artisan key:generate
+```
+
+Run database migrations:
+```bash
+./vendor/bin/sail artisan migrate
 ```
 
 ### 5. Install JavaScript Dependencies
