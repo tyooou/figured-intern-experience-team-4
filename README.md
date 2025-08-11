@@ -95,6 +95,11 @@ This command will start all the necessary services (web server, database, etc.).
 
 In a new terminal window, run these commands to configure the application:
 
+Copy env file:
+```bash
+cp .env.example .env
+```
+
 Generate the application encryption key:
 ```bash
 ./vendor/bin/sail artisan key:generate
