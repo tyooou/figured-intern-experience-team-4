@@ -1,0 +1,157 @@
+# The Figured Intern Experience
+
+Welcome to the Figured Intern Experience application! This is a Laravel application built with Laravel Sail and Prism, designed for our software development graduate event.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+
+- **Docker Desktop** (required for Laravel Sail)
+  - [Mac Installation Guide](https://docs.docker.com/desktop/setup/install/mac-install/)
+  - [Windows Installation Guide](https://docs.docker.com/desktop/setup/install/windows-install/)
+- **Git** (for cloning the repository)
+- **A terminal application** (Terminal on Mac, PowerShell/WSL on Windows)
+
+## Getting Started
+
+Follow these steps to get the application running on your local machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone [repository-url]
+cd figured-intern-experience
+```
+
+### 2. Start Laravel Sail
+
+Launch the Docker containers using Laravel Sail:
+
+```bash
+./vendor/bin/sail up
+```
+
+This command will start all the necessary services (web server, database, etc.). Keep this terminal window open while working on the application.
+
+### 3. Install PHP Dependencies
+
+In a new terminal window, install the Composer packages:
+
+```bash
+./vendor/bin/sail composer install
+```
+
+### 4. Install JavaScript Dependencies
+
+Install the Node.js packages required for the frontend:
+
+```bash
+./vendor/bin/sail npm install
+```
+
+### 5. Start the Development Server
+
+Run the Vite development server for hot-reloading and asset compilation:
+
+```bash
+./vendor/bin/sail npm run dev
+```
+
+Keep this terminal window open alongside the Sail containers for the best development experience.
+
+## Accessing the Application
+
+Once all services are running, you can access the application at:
+
+- **http://localhost/** 
+- **http://127.0.0.1/**
+
+You should see the default Laravel welcome page.
+
+## Useful Commands
+
+Here are some commands you'll find helpful during development:
+
+### Laravel Sail Commands
+
+```bash
+# Start containers in the background
+./vendor/bin/sail up -d
+
+# Stop containers
+./vendor/bin/sail down
+
+# Run Artisan commands
+./vendor/bin/sail artisan [command]
+
+# Access the MySQL database
+./vendor/bin/sail mysql
+
+# Run tests
+./vendor/bin/sail test
+```
+
+### NPM Commands
+
+```bash
+# Build assets for production
+./vendor/bin/sail npm run build
+
+# Run the development server
+./vendor/bin/sail npm run dev
+
+# Format code with Prettier
+./vendor/bin/sail npm run format
+```
+
+## Troubleshooting
+
+### Docker Issues
+
+- **Docker not running**: Make sure Docker Desktop is running before executing Sail commands
+- **Port conflicts**: If you get port errors, another service might be using port 80. You can change the port by setting `APP_PORT` in your `.env` file
+
+### Permission Issues (Linux/Mac)
+
+If you encounter permission issues, you might need to run:
+
+```bash
+chmod +x ./vendor/bin/sail
+```
+
+### Windows-Specific Issues
+
+- If using Windows, consider using WSL2 for better performance
+- Run commands in WSL2 terminal rather than PowerShell for best compatibility
+
+## Project Structure
+
+```
+figured-intern-experience/
+├── app/              # Laravel application code
+├── resources/        # Frontend assets (Vue components, CSS)
+├── routes/           # Application routes
+├── database/         # Migrations and seeders
+├── public/           # Publicly accessible files
+└── docker-compose.yml # Docker configuration
+```
+
+## Technologies Used
+
+- **Laravel** - PHP web framework
+- **Laravel Sail** - Docker development environment
+- **Laravel Prism** - API documentation
+- **Vue.js** - Frontend framework
+- **Vite** - Build tool and dev server
+- **TypeScript** - Type-safe JavaScript
+
+## Support
+
+If you encounter any issues during setup, please reach out to the event organizers or check the documentation for:
+- [Laravel Documentation](https://laravel.com/docs)
+- [Laravel Sail Documentation](https://laravel.com/docs/sail)
+- [Docker Documentation](https://docs.docker.com/)
+
+---
+
+Happy coding! 🚀
