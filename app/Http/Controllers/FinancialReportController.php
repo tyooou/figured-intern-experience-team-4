@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Prism\Prism\Prism;
 
 class FinancialReportController extends Controller
 {
@@ -299,5 +301,36 @@ class FinancialReportController extends Controller
         ];
 
         return response()->json($reportData);
+    }
+
+    /**
+     * Generate AI commentary using Prism
+     */
+    public function generateCommentary(Request $request): JsonResponse
+    {
+        try {
+            // Check if OpenAI API key is configured
+            if (empty(env('OPENAI_API_KEY'))) {
+                return response()->json([
+                    'error' => 'OpenAI API key not configured. Please add OPENAI_API_KEY to your .env file.'
+                ], 500);
+            }
+
+            $prompt = $request->input('prompt', 'Provide general business insights');
+
+            $response = Prism::text()
+                ->using('openai', 'gpt-4')
+                ->withPrompt($prompt)
+                ->generate();
+
+            return response()->json([
+                'response' => $response->text
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => 'Failed to generate commentary: ' . $e->getMessage()
+            ], 500);
+        }
     }
 }

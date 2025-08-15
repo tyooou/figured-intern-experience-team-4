@@ -14,3 +14,6 @@ Route::get('/challenge', function () {
 
 Route::get('/api/financial-report', [FinancialReportController::class, 'getFinancialReport'])
     ->name('api.financial-report');
+
+Route::post('/api/generate-commentary', [FinancialReportController::class, 'generateCommentary'])
+    ->name('api.generate-commentary');

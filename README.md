@@ -66,6 +66,8 @@ For more detailed installation instructions and troubleshooting, visit the [offi
 
 Follow these steps to get the application running on your local machine:
 
+> **📋 Challenge Day Setup**: You will receive an OpenAI API key on challenge day that needs to be added to your `.env` file for the AI commentary features to work.
+
 ### 1. Clone the Repository
 
 ```bash
@@ -108,6 +110,12 @@ Generate the application encryption key:
 Run database migrations:
 ```bash
 ./vendor/bin/sail artisan migrate
+```
+
+**Add OpenAI API Key (Challenge Day):**
+```bash
+# Edit your .env file and add the provided API key:
+OPENAI_API_KEY=your-api-key-here
 ```
 
 ### 5. Install JavaScript Dependencies
