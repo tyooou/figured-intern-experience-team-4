@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FinancialReportController;
+use App\Http\Controllers\MarkdownController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -17,3 +18,6 @@ Route::get('/api/financial-report', [FinancialReportController::class, 'getFinan
 
 Route::post('/api/generate-commentary', [FinancialReportController::class, 'generateCommentary'])
     ->name('api.generate-commentary');
+
+Route::get('/CHALLENGE.md', [MarkdownController::class, 'showChallenge'])
+    ->name('challenge.md');
