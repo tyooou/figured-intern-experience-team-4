@@ -202,5 +202,3 @@ Your solution will be evaluated on:
 ---
 
 **Good luck, and remember**: This challenge reflects real work at Figured. Show us how you'd build software that helps farmers and accountants make better business decisions! 🌾💼
-
-*Ready to transform agricultural finance? Let's see what you can build!*

@@ -13,9 +13,9 @@ import { Head, Link } from '@inertiajs/vue3';
                 <div
                     class="flex-1 rounded-br-lg rounded-bl-lg bg-white p-6 pb-12 text-[13px] leading-[20px] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] lg:rounded-tl-lg lg:rounded-br-none lg:p-20 dark:bg-[#161615] dark:text-[#EDEDEC] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]"
                 >
-                    <h1 class="mb-1 font-medium">Welcome to the Figured Intern Experience</h1>
+                    <h1 class="font-medium">Welcome to the Figured Intern Experience</h1>
                     <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">
-                        Ready to build something amazing? <br />Your challenge awaits below!
+                        <br />Your challenge awaits below!
                     </p>
                     <ul class="mb-4 flex flex-col lg:mb-6">
                         <li
@@ -32,7 +32,7 @@ import { Head, Link } from '@inertiajs/vue3';
                                 Start the
                                 <Link
                                     href="/challenge"
-                                    class="ml-1 inline-flex items-center space-x-1 font-medium text-[#f53003] underline underline-offset-4 dark:text-[#FF4433]"
+                                    class="ml-1 inline-flex items-center space-x-1 font-medium text-[#296fdc] underline underline-offset-4 dark:text-[#FF4433]"
                                 >
                                     <span>Financial Report Challenge</span>
                                     <svg
@@ -63,7 +63,7 @@ import { Head, Link } from '@inertiajs/vue3';
                                 <a
                                     href="/api/financial-report"
                                     target="_blank"
-                                    class="ml-1 inline-flex items-center space-x-1 font-medium text-[#f53003] underline underline-offset-4 dark:text-[#FF4433]"
+                                    class="ml-1 inline-flex items-center space-x-1 font-medium text-[#296fdc] underline underline-offset-4 dark:text-[#FF4433]"
                                 >
                                     <span>Financial Data API</span>
                                     <svg
@@ -84,7 +84,7 @@ import { Head, Link } from '@inertiajs/vue3';
                         <li>
                             <Link
                                 href="/challenge"
-                                class="inline-block rounded-sm border border-black bg-[#1b1b18] px-5 py-1.5 text-sm leading-normal text-white hover:border-black hover:bg-black dark:border-[#eeeeec] dark:bg-[#eeeeec] dark:text-[#1C1C1A] dark:hover:border-white dark:hover:bg-white"
+                                class="inline-block rounded-sm bg-[#296fdc] px-5 py-1.5 text-sm leading-normal text-white hover:border-black hover:bg-[#225EBB] dark:border-[#eeeeec] dark:bg-[#eeeeec] dark:text-[#1C1C1A] dark:hover:border-white dark:hover:bg-white"
                             >
                                 Start Challenge
                             </Link>

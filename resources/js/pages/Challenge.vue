@@ -120,7 +120,7 @@ onMounted(() => {
         <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h3 class="text-blue-900 font-semibold text-lg mb-3">🎯 Your Challenge</h3>
           <div class="text-blue-800 space-y-2">
-            <p>Build a complete, interactive Profit & Loss report using the financial data loaded above.</p>
+            <p>Build a complete, interactive Profit & Loss report using the provided financial data.</p>
             <p>The data is available in <code class="bg-blue-100 px-1 rounded">reportData</code> - explore it and create a professional financial report interface.</p>
           </div>
         </div>
