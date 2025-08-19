@@ -153,7 +153,28 @@ Since we'll be **reviewing and judging your code**:
    - Add polish and stretch features
 
 3. **Important Files**
-TODO
+   - **`routes/web.php`** - Defines application routes including:
+     - `/` - Welcome page
+     - `/challenge` - Main challenge page where you'll build the P&L report
+     - `/api/financial-report` - API endpoint that returns the financial data
+     - `/api/generate-commentary` - API endpoint for AI commentary generation
+   
+   - **`app/Http/Controllers/FinancialReportController.php`** - Backend controller that:
+     - Provides the complete financial data structure through `getFinancialReport()`
+     - Handles AI commentary generation via Prism integration
+     - Returns hierarchical data with sections, subsections, and line items
+   
+   - **`resources/js/pages/Challenge.vue`** - Your main workspace:
+     - Currently shows a basic implementation
+     - Fetches data from the API endpoint
+     - Includes AI commentary demo functionality
+     - **This is where you'll build your P&L report!**
+   
+   - **`resources/js/pages/Welcome.vue`** - Landing page that provides entry points to the challenge
+   
+   - **`resources/js/app.ts`** - Application entry point that sets up Inertia.js and Vue
+   
+   - **`resources/views/app.blade.php`** - Laravel Blade template that serves as the HTML shell for the Vue application
 
 ## ❓ Need Help?
 
