@@ -14,7 +14,7 @@ Create a visually appealing Profit & Loss report using Vue.js and Tailwind CSS t
 
 Your data comes from a real farm operation called "Pam Testing Farm Operations" covering:
 - **Time Period**: April 2025 - March 2026 (Actuals + Forecast)
-- **Enterprises**: Sheep farming, Wheat production, Barley cultivation
+- **Groups**: Sheep farming, Wheat production, Barley cultivation
 - **Categories**: Income, Costs, Operating Expenses
 - **Rich Details**: Monthly breakdowns, account-level granularity
 
@@ -25,8 +25,7 @@ Your data comes from a real farm operation called "Pam Testing Farm Operations" 
 ### 1. **Visual Design & Styling**
 - Use **Tailwind CSS** exclusively for styling
 - Create a professional, clean design that looks like a real accounting report
-- Implement responsive design that works on desktop and mobile
-- Use appropriate colors, typography, and spacing for financial data
+- Use appropriate colors, typography, and spacing
 - Make negative numbers clearly distinguishable (red/parentheses)
 
 ### 2. **Data Display**
@@ -34,21 +33,15 @@ Your data comes from a real farm operation called "Pam Testing Farm Operations" 
 - Display the company information (name, report type, period)
 - Present data in a logical, hierarchical structure
 - Format numbers appropriately (thousands separators, currency symbols)
+- Clear nesting levels (indentation, borders, colors)
 
-### 3. **Interactive Features**
-- **Collapsible Sections**: Users should be able to expand/collapse categories
-  - Income → Sheep → Income/Costs
-  - Operating Expenses → Other
-- **Responsive Totals**: Show subtotals and running totals
-- **Visual Hierarchy**: Clear nesting levels (indentation, borders, colors)
-
-### 4. **Vue.js Implementation**
+### 3. **Vue.js Implementation**
 - Use Vue 3 composition API or options API (your choice)
 - Implement reactive data fetching from the API
 - Use Vue directives effectively (v-for, v-if, v-show, etc.)
 - Handle loading and error states gracefully
 
-### 5. **Code Quality**
+### 4. **Code Quality**
 - Clean, readable code with meaningful variable names
 - Proper component structure and organization
 - Appropriate use of Vue reactivity and lifecycle hooks
@@ -60,7 +53,6 @@ Think of professional financial reports you've seen:
 - Clear hierarchy with indentation
 - Professional typography and spacing
 - Subtle borders and dividers
-- Intuitive expand/collapse indicators
 - Color coding for different data types
 
 ## 🚀 Stretch Goals (Optional but Impressive!)
@@ -93,13 +85,10 @@ $response = Prism::text()
 
 ### **Vue.js Tips**
 - Use `computed` properties for calculated totals
-- Consider `v-model` for controlling collapsed/expanded states
 - Use `watch` to react to data changes
 - Component composition can help organize complex nested structures
 
 ### **Tailwind CSS Tips**
-- Use `@apply` directive for reusable style combinations
-- Leverage responsive prefixes (`sm:`, `md:`, `lg:`)
 - Use spacing utilities consistently (`p-4`, `mb-6`, `space-y-2`)
 - Color utilities for financial data (`text-red-600`, `text-green-600`)
 - Grid and flexbox utilities for layout (`grid`, `flex`, `justify-between`)
@@ -108,13 +97,6 @@ $response = Prism::text()
 - The API returns structured data with `sections`, `subsections`, and `line_items`
 - Each line item has a `values` array matching the column structure
 - Use array methods like `reduce()` for calculating totals
-- Consider caching API responses for better performance
-
-### **Accessibility Considerations**
-- Use semantic HTML elements (`table`, `thead`, `tbody`)
-- Proper heading hierarchy (`h1`, `h2`, `h3`)
-- ARIA labels for interactive elements
-- Keyboard navigation for collapsible sections
 
 ## 🏢 How This Aligns with Figured
 
@@ -156,7 +138,7 @@ Since we'll be **reviewing and judging your code**:
 ### **Submission Process**
 - Submit your solution as a **Pull Request** to the challenge repository
 - Include a brief README with setup instructions
-- Deadline: Prior to judging (exact time will be announced)
+- Deadline: Prior to judging (7:45 PM)
 
 ## 🛠 Getting Started
 
@@ -165,21 +147,13 @@ Since we'll be **reviewing and judging your code**:
    # Test the API endpoint
    curl http://localhost/api/financial-report
    ```
-
-2. **Plan Your Component Structure**
-   - Think about reusable components (FinancialRow, CollapsibleSection)
-   - Consider state management for expanded/collapsed sections
-
-3. **Start Simple, Build Up**
+2. **Start Simple, Build Up**
    - First, display basic data in a table
    - Add styling and make it look professional
-   - Implement interactivity (collapsible sections)
    - Add polish and stretch features
 
-4. **Test Thoroughly**
-   - Verify all calculations are correct
-   - Test responsive design on different screen sizes
-   - Ensure accessibility with keyboard navigation
+3. **Important Files**
+TODO
 
 ## ❓ Need Help?
 
@@ -196,7 +170,7 @@ Your solution will be evaluated on:
 2. **Functionality**: Do all features work as expected?
 3. **Code Quality**: Is the code clean, organized, and maintainable?
 4. **User Experience**: Is it intuitive and easy to use?
-5. **Technical Implementation**: Good use of Vue.js and modern web practices?
+5. **Technical Implementation**: Good use of modern web practices?
 6. **Creativity**: Any innovative features or approaches?
 
 ---
