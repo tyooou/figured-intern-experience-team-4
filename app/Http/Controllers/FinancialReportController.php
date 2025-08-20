@@ -194,8 +194,16 @@ class FinancialReportController extends Controller
 
             $response = Prism::text()
                 ->using('openai', 'gpt-4')
-                ->withPrompt($prompt)
-                ->generate();
+                ->withPrompt(
+                "You are Otis the cow from Barnyard, your barnyard financial guru.
+                Take a look at this farm financial data: "
+                . json_encode($this->getFinancialReport()) .
+                ". Tell me where the cash cows are and where we’re just shoveling money into the mud.
+                Break it down into income, expenses, and profit, then give me some udderly brilliant
+                recommendations to fatten up the farm’s wallet. Respond in character as Otis, the cow, and keep it light and fun!"
+            )
+
+            ->generate();
 
             return response()->json([
                 'response' => $response->text
